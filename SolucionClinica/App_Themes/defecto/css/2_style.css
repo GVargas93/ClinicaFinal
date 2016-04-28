@@ -1,0 +1,33 @@
+﻿body{
+    padding: 0px;
+    margin: 0px;
+    /*background-color:#B6B6B6;*/
+}
+.center{
+    width: 900px;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+
+header{
+    /*background-color: #CDDC39;*/
+    color:white;
+    border-radius: 20px;
+}
+
+header nav{
+    /*background-color:#03A9F4;*/
+    color:white;
+    border-radius:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-top:20px;
+}
+p{
+
+ /*background-color:#03A9F4;*/
+    color:white;
+    border-radius:5PX;
+    padding-top:5p
+   
+
