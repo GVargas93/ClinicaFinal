@@ -21,12 +21,17 @@ public partial class FormularioConsultas : System.Web.UI.Page
             {
                 int consultaId = Convert.ToInt32(strId);
                 Consulta obj = ConsultaBLL.GetConsultaById(consultaId);
-
-                fechaTextBox.Text = obj.fechaHora;
+                //Calendar1.SelectedDate = dateOn
+                //Calendar1.SelectedDate = Convert.ToDateTime(dateOnly.ToString(obj.fechaHora));
+                Calendar1.SelectedDate = Convert.ToDateTime(obj.fechaHora);
+                //Calendar1.SelectedDate.ToString('dd/MM/yyyy') = Convert.ToString(obj.fechaHora);
+                //Calendar1.SelectedDate = conver
+                //fechaTextBox.Text = obj.fechaHora;
                 observacionTextBox.Text = obj.observacion;
                 DiagnosticoTextBox.Text = obj.diagnostico;
                 EstudioTextBox.Text = obj.estudio;
-                cita_IdTextBox.Text = Convert.ToString(obj.citaId);
+                DropDownList1.SelectedValue = Convert.ToString(obj.citaId);
+                //cita_IdTextBox.Text = Convert.ToString(obj.citaId);
 
                 ConsultaIdHiddenField.Value = strId;
             }
@@ -45,11 +50,14 @@ public partial class FormularioConsultas : System.Web.UI.Page
                 Consulta obj = new Consulta()
                 {
                     consultaId = consultaId,
-                    fechaHora = fechaTextBox.Text,
+                    //fechaHora = Calendar1.SelectedDate.ToString(),
+                    fechaHora = Calendar1.SelectedDate.ToString("dd/MM/yyyy"),
+                    //fechaHora = Convert.ToString(Calendar1.SelectedDate),
                     observacion = observacionTextBox.Text,
                     diagnostico=DiagnosticoTextBox.Text,
                     estudio=EstudioTextBox.Text,
-                    citaId = Convert.ToInt32(cita_IdTextBox.Text)
+                    citaId=Convert.ToInt32(DropDownList1.SelectedValue)
+                    //citaId = Convert.ToInt32(cita_IdTextBox.Text)
                 };
 
                 if (consultaId == 0)

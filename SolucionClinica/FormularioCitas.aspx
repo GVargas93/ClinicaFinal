@@ -37,39 +37,24 @@
             </div>
 
             <div class="form-group">
-                <label>doctorId</label>
-                <asp:TextBox ID="doctorIdTextBox1" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:RequiredFieldValidator runat="server"
-                    ControlToValidate="doctorIdTextBox1"
-                    Display="Dynamic"
-                    ForeColor="Red"
-                    ValidationGroup="Cita"
-                    ErrorMessage="Debe ingresar el doctorId">
-                </asp:RequiredFieldValidator>
+                D<label>octor</label>
+                <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSourceDoctorId" DataTextField="nombre" DataValueField="doctor_id">
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSourceDoctorId" runat="server" ConnectionString="<%$ ConnectionStrings:Clinica %>" SelectCommand="SELECT [doctor_id], [nombre] FROM [Tbl_Doctor]"></asp:SqlDataSource>
             </div>
 
             <div class="form-group">
-                <label>pacienteid</label>
-                <asp:TextBox ID="pacienteidTextBox1" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:RequiredFieldValidator runat="server"
-                    ControlToValidate="pacienteidTextBox1"
-                    Display="Dynamic"
-                    ForeColor="Red"
-                    ValidationGroup="Cita"
-                    ErrorMessage="Debe ingresar el pacienteid">
-                </asp:RequiredFieldValidator>
+                P<label>aciente</label>
+                <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource2" DataTextField="nombre" DataValueField="paciente_id">
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Clinica %>" SelectCommand="SELECT [nombre], [paciente_id] FROM [Tbl_Paciente]"></asp:SqlDataSource>
             </div>
 
             <div class="form-group">
-                <label>usuarioId</label>
-                <asp:TextBox ID="usuarioIdTextBox1" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:RequiredFieldValidator runat="server"
-                    ControlToValidate="usuarioIdTextBox1"
-                    Display="Dynamic"
-                    ForeColor="Red"
-                    ValidationGroup="Cita"
-                    ErrorMessage="Debe ingresar el usuarioId">
-                </asp:RequiredFieldValidator>
+                U<label>suario</label>
+                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource3" DataTextField="userName" DataValueField="Usuario_id">
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:Clinica %>" SelectCommand="SELECT [Usuario_id], [userName] FROM [Tbl_Usuario]"></asp:SqlDataSource>
             </div>
 
             <asp:LinkButton ID="SaveButtonn" runat="server"

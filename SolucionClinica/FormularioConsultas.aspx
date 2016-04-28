@@ -13,14 +13,8 @@
 
             <div class="form-group">
                 <label>Fecha</label>
-                <asp:TextBox ID="fechaTextBox" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:RequiredFieldValidator runat="server"
-                    ControlToValidate="fechaTextBox"
-                    Display="Dynamic"
-                    ForeColor="Red"
-                    ValidationGroup="Consulta"
-                    ErrorMessage="Debe ingresar el Fecha">
-                </asp:RequiredFieldValidator>
+                <asp:Calendar ID="Calendar1" runat="server">
+                </asp:Calendar>
             </div>
             
 
@@ -62,14 +56,9 @@
 
             <div class="form-group">
                 <label>Id Cita</label>
-                <asp:TextBox ID="cita_IdTextBox" runat="server" CssClass="form-control"></asp:TextBox>
-                <asp:RequiredFieldValidator runat="server"
-                    ControlToValidate="cita_IdTextBox"
-                    Display="Dynamic"
-                    ForeColor="Red"
-                    ValidationGroup="Consulta"
-                    ErrorMessage="Debe ingresar el Id Cita">
-                </asp:RequiredFieldValidator>
+                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourceCitaId" DataTextField="cita_id" DataValueField="cita_id">
+                </asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSourceCitaId" runat="server" ConnectionString="<%$ ConnectionStrings:Clinica %>" SelectCommand="SELECT [cita_id] FROM [Tbl_Cita]"></asp:SqlDataSource>
             </div>
 
 

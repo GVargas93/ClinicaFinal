@@ -25,9 +25,14 @@ public partial class FormularioCitas : System.Web.UI.Page
                 
                 fechaTextBox1.Text = obj.fechaHora;
                 observacionTextBox1.Text = obj.observacion;
-                doctorIdTextBox1.Text = Convert.ToString(obj.doctorId);
-                pacienteidTextBox1.Text = Convert.ToString(obj.pacienteid);
-                usuarioIdTextBox1.Text = Convert.ToString(obj.usuarioId);
+                DropDownList2.SelectedValue = Convert.ToString(obj.doctorId);
+                DropDownList3.SelectedValue = Convert.ToString(obj.pacienteid);
+                DropDownList1.SelectedValue = Convert.ToString(obj.usuarioId);
+
+                //doctorIdTextBox1.Text = Convert.ToString(obj.doctorId);
+                //pacienteidTextBox1.Text = Convert.ToString(obj.pacienteid);
+                //usuarioIdTextBox1.Text = Convert.ToString(obj.usuarioId);
+                                //DropDownList1.SelectedValue = Convert.ToString(obj.citaId);
 
                 CitaIdHiddenField.Value = strId;
             }
@@ -49,9 +54,12 @@ public partial class FormularioCitas : System.Web.UI.Page
                     citaId = citaa,
                     fechaHora = fechaTextBox1.Text,
                     observacion = observacionTextBox1.Text,
-                    doctorId = Convert.ToInt32(doctorIdTextBox1.Text),
-                    pacienteid = Convert.ToInt32(pacienteidTextBox1.Text),
-                    usuarioId = Convert.ToInt32(usuarioIdTextBox1.Text)
+                    doctorId=Convert.ToInt32(DropDownList2.SelectedValue),
+                    pacienteid=Convert.ToInt32(DropDownList3.SelectedValue),
+                    usuarioId=Convert.ToInt32(DropDownList1.SelectedValue)
+                    //doctorId = Convert.ToInt32(doctorIdTextBox1.Text),
+                    //pacienteid = Convert.ToInt32(pacienteidTextBox1.Text),
+                    //usuarioId = Convert.ToInt32(usuarioIdTextBox1.Text)
                 };
 
                 if (citaa == 0)
@@ -67,4 +75,8 @@ public partial class FormularioCitas : System.Web.UI.Page
 
             Response.Redirect("~/ListaCitas.aspx");
         }
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
         }
+}
