@@ -28,7 +28,7 @@
               <Mapping SourceColumn="usuario_id" DataSetColumn="usuario_id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DBConnectionString (Web.config)" DbObjectName="Clinica.dbo.actulizar_doctor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="actulizar_doctor" Modifier="Public" Name="actulizar_doctor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="actulizar_doctor">
+              <DbSource ConnectionRef="DBConnectionString (Web.config)" DbObjectName="Clinica.dbo.actulizar_doctor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="actulizar_doctor" Modifier="Public" Name="actulizar_doctor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="actulizar_doctor">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.actulizar_doctor</CommandText>
@@ -65,7 +65,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DBConnectionString (Web.config)" DbObjectName="Clinica.dbo.insertar_doctor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_doctor" Modifier="Public" Name="insertar_doctor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="insertar_doctor">
+              <DbSource ConnectionRef="DBConnectionString (Web.config)" DbObjectName="Clinica.dbo.insertar_doctor" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_doctor" Modifier="Public" Name="insertar_doctor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="insertar_doctor">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.insertar_doctor</CommandText>
@@ -90,7 +90,7 @@
   <xs:element name="Doctordb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="Doctordb" msprop:Generator_UserDSName="Doctordb">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Doctor" msprop:Generator_TableClassName="DoctorDataTable" msprop:Generator_TableVarName="tableDoctor" msprop:Generator_TablePropName="Doctor" msprop:Generator_RowDeletingName="DoctorRowDeleting" msprop:Generator_RowChangingName="DoctorRowChanging" msprop:Generator_RowEvHandlerName="DoctorRowChangeEventHandler" msprop:Generator_RowDeletedName="DoctorRowDeleted" msprop:Generator_UserTableName="Doctor" msprop:Generator_RowChangedName="DoctorRowChanged" msprop:Generator_RowEvArgName="DoctorRowChangeEvent" msprop:Generator_RowClassName="DoctorRow">
+        <xs:element name="Doctor" msprop:Generator_TableClassName="DoctorDataTable" msprop:Generator_TableVarName="tableDoctor" msprop:Generator_RowChangedName="DoctorRowChanged" msprop:Generator_TablePropName="Doctor" msprop:Generator_RowDeletingName="DoctorRowDeleting" msprop:Generator_RowChangingName="DoctorRowChanging" msprop:Generator_RowEvHandlerName="DoctorRowChangeEventHandler" msprop:Generator_RowDeletedName="DoctorRowDeleted" msprop:Generator_RowClassName="DoctorRow" msprop:Generator_UserTableName="Doctor" msprop:Generator_RowEvArgName="DoctorRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="doctor_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columndoctor_id" msprop:Generator_ColumnPropNameInRow="doctor_id" msprop:Generator_ColumnPropNameInTable="doctor_idColumn" msprop:Generator_UserColumnName="doctor_id" type="xs:int" />

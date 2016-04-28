@@ -30,7 +30,7 @@
               <Mapping SourceColumn="Fk_cita_id" DataSetColumn="Fk_cita_id" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="Clinica (Web.config)" DbObjectName="Clinica.dbo.usp_ActualizarConsulta" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ActualizarConsulta" Modifier="Public" Name="ActualizarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ActualizarConsulta">
+              <DbSource ConnectionRef="Clinica (Web.config)" DbObjectName="Clinica.dbo.usp_ActualizarConsulta" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ActualizarConsulta" Modifier="Public" Name="ActualizarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ActualizarConsulta">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.usp_ActualizarConsulta</CommandText>
@@ -46,7 +46,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Clinica (Web.config)" DbObjectName="Clinica.dbo.usp_EliminarConsulta" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="EliminarConsulta" Modifier="Public" Name="EliminarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="EliminarConsulta">
+              <DbSource ConnectionRef="Clinica (Web.config)" DbObjectName="Clinica.dbo.usp_EliminarConsulta" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="EliminarConsulta" Modifier="Public" Name="EliminarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="EliminarConsulta">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.usp_EliminarConsulta</CommandText>
@@ -68,7 +68,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="Clinica (Web.config)" DbObjectName="Clinica.dbo.usp_InsertarConsulta" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="InsertarConsulta" Modifier="Public" Name="InsertarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="InsertarConsulta">
+              <DbSource ConnectionRef="Clinica (Web.config)" DbObjectName="Clinica.dbo.usp_InsertarConsulta" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="InsertarConsulta" Modifier="Public" Name="InsertarConsulta" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="InsertarConsulta">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.usp_InsertarConsulta</CommandText>
@@ -94,7 +94,7 @@
   <xs:element name="ConsultaDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="ConsultaDS" msprop:Generator_UserDSName="ConsultaDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Consulta" msprop:Generator_TableClassName="ConsultaDataTable" msprop:Generator_TableVarName="tableConsulta" msprop:Generator_TablePropName="Consulta" msprop:Generator_RowDeletingName="ConsultaRowDeleting" msprop:Generator_RowChangingName="ConsultaRowChanging" msprop:Generator_RowEvHandlerName="ConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsultaRowDeleted" msprop:Generator_UserTableName="Consulta" msprop:Generator_RowChangedName="ConsultaRowChanged" msprop:Generator_RowEvArgName="ConsultaRowChangeEvent" msprop:Generator_RowClassName="ConsultaRow">
+        <xs:element name="Consulta" msprop:Generator_TableClassName="ConsultaDataTable" msprop:Generator_TableVarName="tableConsulta" msprop:Generator_RowChangedName="ConsultaRowChanged" msprop:Generator_TablePropName="Consulta" msprop:Generator_RowDeletingName="ConsultaRowDeleting" msprop:Generator_RowChangingName="ConsultaRowChanging" msprop:Generator_RowEvHandlerName="ConsultaRowChangeEventHandler" msprop:Generator_RowDeletedName="ConsultaRowDeleted" msprop:Generator_RowClassName="ConsultaRow" msprop:Generator_UserTableName="Consulta" msprop:Generator_RowEvArgName="ConsultaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="atencion_id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnatencion_id" msprop:Generator_ColumnPropNameInRow="atencion_id" msprop:Generator_ColumnPropNameInTable="atencion_idColumn" msprop:Generator_UserColumnName="atencion_id" type="xs:int" />
