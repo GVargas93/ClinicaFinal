@@ -54,18 +54,9 @@
  </div>
               <div class="form-group">
     <asp:Label ID="Label4" runat="server" Text="Usuario" ForeColor="Red"></asp:Label>
-    <asp:TextBox ID="Usuariotextbox" runat="server"
-             CssClass="form-control">
-
-    </asp:TextBox>
-                  <asp:RequiredFieldValidator runat="server"
-                     ControlToValidate="Usuariotextbox"
-                     display="Dynamic"
-                         ForeColor="Blue"
-                         ValidationGroup="Doctor"
-                         ErrorMessage="Debe ingresar el Usuario del Doctor">
-
-                 </asp:RequiredFieldValidator>
+                  <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource2" DataTextField="usuario" DataValueField="usuario_id">
+                  </asp:DropDownList>
+                  <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=DESKTOP-NRAK6GG\SQLEXPRESS;Initial Catalog=Clinica;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [usuario_id], [usuario] FROM [Usuario]"></asp:SqlDataSource>
  </div>
                 <div class="col-md-12"> 
               <asp:GridView ID="DoctorGridView" runat="server"

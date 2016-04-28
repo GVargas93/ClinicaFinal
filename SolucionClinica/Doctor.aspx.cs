@@ -27,7 +27,7 @@ public partial class Doctor : System.Web.UI.Page
             NombreDoctor.Text = obj.nombre;
             Especialidad.Text = obj.especialidad;
             TelefonoTextbox.Text = obj.telefono;
-            Usuariotextbox.Text = obj.usuario_id.ToString();
+  
             doctoridhiddenfield.Value = stringid;
         }
         catch (Exception ex)
@@ -49,9 +49,9 @@ public partial class Doctor : System.Web.UI.Page
                 nombre = NombreDoctor.Text,
                 especialidad = Especialidad.Text,
                 telefono = TelefonoTextbox.Text,
-                usuario_id = Convert.ToInt32( Usuariotextbox.Text)
+                usuario_id = Convert.ToInt32(DropDownList1.SelectedValue)
 
-                
+
 
             };
             if (doctor_id == 0)
