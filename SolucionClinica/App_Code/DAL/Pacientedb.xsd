@@ -2,14 +2,15 @@
 <xs:schema id="Pacientedb" targetNamespace="http://tempuri.org/Pacientedb.xsd" xmlns:mstns="http://tempuri.org/Pacientedb.xsd" xmlns="http://tempuri.org/Pacientedb.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="DBAConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DBAConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.DBAConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="DBAConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="DBAConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.DBAConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="DBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DBConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.DBConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pacienteTableAdapter" GeneratorDataComponentClassName="pacienteTableAdapter" Name="paciente" UserDataComponentName="pacienteTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="DBAConnectionString (Web.config)" DbObjectName="Clinica.dbo.getpaciente" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetPaciente" GetMethodModifier="Public" GetMethodName="GetPaciente" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetPaciente" UserSourceName="GetPaciente">
+              <DbSource ConnectionRef="DBConnectionString (Web.config)" DbObjectName="Clinica.dbo.getpaciente" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="false" GeneratorGetMethodName="GetPaciente" GetMethodModifier="Public" GetMethodName="GetPaciente" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetPaciente" UserSourceName="GetPaciente">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.getpaciente</CommandText>
@@ -28,7 +29,7 @@
               <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="DBAConnectionString (Web.config)" DbObjectName="Clinica.dbo.actulizar_paciente" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="actulizar_paciente" Modifier="Public" Name="actulizar_paciente" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="actulizar_paciente">
+              <DbSource ConnectionRef="DBConnectionString (Web.config)" DbObjectName="Clinica.dbo.actulizar_paciente" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="actulizar_paciente" Modifier="Public" Name="actulizar_paciente" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="actulizar_paciente">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.actulizar_paciente</CommandText>
@@ -43,7 +44,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DBAConnectionString (Web.config)" DbObjectName="Clinica.dbo.eliminar_paciente" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="eliminar_paciente" Modifier="Public" Name="eliminar_paciente" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="eliminar_paciente">
+              <DbSource ConnectionRef="DBConnectionString (Web.config)" DbObjectName="Clinica.dbo.eliminar_paciente" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="eliminar_paciente" Modifier="Public" Name="eliminar_paciente" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="eliminar_paciente">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.eliminar_paciente</CommandText>
@@ -54,7 +55,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DBAConnectionString (Web.config)" DbObjectName="Clinica.dbo.getpacienteById" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="GetDataBy3">
+              <DbSource ConnectionRef="DBConnectionString (Web.config)" DbObjectName="Clinica.dbo.getpacienteById" DbObjectType="StoredProcedure" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy3" GetMethodModifier="Public" GetMethodName="GetDataBy3" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="GetDataBy3">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.getpacienteById</CommandText>
@@ -65,7 +66,7 @@
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="DBAConnectionString (Web.config)" DbObjectName="Clinica.dbo.insertar_paciente" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_paciente" Modifier="Public" Name="insertar_paciente" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="insertar_paciente">
+              <DbSource ConnectionRef="DBConnectionString (Web.config)" DbObjectName="Clinica.dbo.insertar_paciente" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="insertar_paciente" Modifier="Public" Name="insertar_paciente" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="insertar_paciente">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.insertar_paciente</CommandText>
@@ -87,7 +88,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="Pacientedb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Pacientedb" msprop:Generator_DataSetName="Pacientedb">
+  <xs:element name="Pacientedb" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="Pacientedb" msprop:Generator_UserDSName="Pacientedb">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="paciente" msprop:Generator_TableClassName="pacienteDataTable" msprop:Generator_TableVarName="tablepaciente" msprop:Generator_TablePropName="paciente" msprop:Generator_RowDeletingName="pacienteRowDeleting" msprop:Generator_RowChangingName="pacienteRowChanging" msprop:Generator_RowEvHandlerName="pacienteRowChangeEventHandler" msprop:Generator_RowDeletedName="pacienteRowDeleted" msprop:Generator_UserTableName="paciente" msprop:Generator_RowChangedName="pacienteRowChanged" msprop:Generator_RowEvArgName="pacienteRowChangeEvent" msprop:Generator_RowClassName="pacienteRow">

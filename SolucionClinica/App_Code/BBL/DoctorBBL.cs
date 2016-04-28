@@ -74,7 +74,7 @@ namespace BD_ClinicaControl.BBL
             }
             int? id = 0;
             DoctordbTableAdapters.DoctorTableAdapter Adapter = new DoctordbTableAdapters.DoctorTableAdapter();
-            Adapter.insertar_doctor(obj.nombre, obj.especialidad, obj.telefono, obj.usuario_id, ref id);  
+            Adapter.insertar_doctor(obj.nombre, obj.especialidad, obj.telefono, Convert.ToString(obj.usuario_id), ref id);  
             if (id == null || id <= 0)
                 throw new Exception("la llave primaria no recorrio  bien");
             return id.Value;
@@ -113,7 +113,7 @@ namespace BD_ClinicaControl.BBL
             int? id = 0;
             DoctordbTableAdapters.DoctorTableAdapter Adapter = new DoctordbTableAdapters.DoctorTableAdapter();
 
-            Adapter.actulizar_doctor(obj.nombre,obj.especialidad,obj.telefono,obj.usuario_id,obj.doctor_id);
+            Adapter.actulizar_doctor(obj.nombre,obj.especialidad,obj.telefono, Convert.ToString(obj.usuario_id), obj.doctor_id);
 
         }
 
